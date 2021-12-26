@@ -14,6 +14,7 @@ class Solution:
                 self.backtrack_exist(board, x,     y + 1, word, k + 1),
                 self.backtrack_exist(board, x,     y - 1, word, k + 1),
                 self.backtrack_exist(board, x + 1, y,     word, k + 1),
+                self.backtrack_exist(board, x - 1, y,     word, k + 1),
                 self.backtrack_exist(board, x + 1, y + 1, word, k + 1),
                 self.backtrack_exist(board, x - 1, y + 1, word, k + 1),
                 self.backtrack_exist(board, x + 1, y - 1, word, k + 1),
