@@ -48,6 +48,10 @@ if __name__ == '__main__':
         words = [line.lower().strip() for line in f.readlines()]
 
     with open('output.txt', 'w+') as f:
+        results = []
         for word in words:
             if obj.exist(board, word) and len(word) >= 3:
-                f.write(word + '\n')
+                results.append(word)
+        results.sort(key=len, reverse=True)
+        for word in results:
+            f.write(word + '\n')
